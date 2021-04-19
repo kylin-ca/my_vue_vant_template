@@ -1,0 +1,138 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+    /*vertical-align: baseline;*/
+    /*-webkit-transform:translate3d(0, 0, 0)*/
+    /*transform: translate3d(0, 0, 0);启用硬件加速*/
+    -webkit-touch-callout: none; /* 长时间按住页面出现闪退*/
+    -webkit-tap-highlight-color:rgba(255,255,255,0); /*ios和android下触摸元素时出现半透明灰色遮罩*/
+    -webkit-overflow-scrolling: touch;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    -webkit-font-smoothing: antialiased; /* 字体抗锯齿渲染 */
+    -moz-osx-font-smoothing: grayscale;
+}
+::-webkit-input-placeholder{ /* WebKit browsers */
+  color:#D8D8D8!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:#D8D8D8!important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:#D8D8D8!important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:#D8D8D8!important;
+}
+ul,li{
+  list-style: none;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input::-webkit-search-cancel-button,input:-ms-clear{
+  display: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,input,textarea{
+  border: 0;
+  -webkit-appearance: none;
+}
+html,body {
+  font-family: "PingFangSC-Regular","Microsoft YaHei",Helvetica,Arial,sans-serif;
+  // font-size:calc(100vw*10/37.5);
+  height:100%;
+  width:100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+.bold{
+  font-weight: bold;
+}
+.ells{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin flexall {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height:100%;
+}
+@mixin flexall-hor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex {
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  flex:1;
+  overflow: auto;
+}
+.flexall{
+  @include flexall;
+}
+.tabsFlex{
+  @include flexall;
+  .van-tabs__content{
+    @include flex;
+  }
+}
+.flexall-hor{
+  @include flexall-hor;
+}
+.flex{
+  @include flex;
+}
+.ells2{
+  letter-spacing: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;  /*要显示的行数*/
+  -webkit-box-orient: vertical;
+}
+.imgMiddle{
+  &:after{
+    content:"";
+    line-height: 100%;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}

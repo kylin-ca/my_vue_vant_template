@@ -1,0 +1,29 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './reset.scss';
+// html,
+// body .app {
+//   color: #333333;
+//   font-family: Arial, Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, sans-serif;
+//   background-color: $background-color;
+// }
+
+.app-container {
+  padding-bottom: 50px;
+}
+// *{
+//   margin: 0;
+//   padding: 0;
+// }
+.address{
+  .van-button--danger{
+    border: #409EFF solid 1px;
+    background-color: #fff;
+    color: #409EFF;
+  }
+}
+.addressItem{
+  [class*=van-hairline]::after{
+    border: none;
+  }
+}
