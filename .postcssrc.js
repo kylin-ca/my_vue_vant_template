@@ -10,6 +10,7 @@ module.exports = ({ file }) => {
       "postcss-px-to-viewport": {
         unitToConvert: "px", // 要转化的单位
         viewportWidth: designWidth, // UI设计稿的宽度
+        // viewportHeight: 1080, // 视窗的高度 可以不写
         unitPrecision: 6, // 转换后的精度，即小数点位数
         propList: ["*"], // 指定转换的css属性的单位，*代表全部css属性的单位都进行转换
         viewportUnit: "vw", // 指定需要转换成的视窗单位，默认vw
